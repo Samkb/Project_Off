@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang='' style="overflow-x: hidden;">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<title>Bean</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" type="text/css" href="css/jpanelmenu.css" />
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="_jquery/css/custom-theme/jquery-ui-1.9.2.custom.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="_jquery/css/jquery.ui.potato.menu.css" />
+	<link rel="stylesheet" type="text/css" href="_jquery/css/fullcalendar.css" />
+	<link rel="stylesheet" type="text/css" href="_jquery/css/fullcalendar.print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="_jquery/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="_jquery/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="_jquery/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="_jquery/js/jquery.jpanelmenu.min.js"></script>
+
+	
+
+	<script type="text/javascript" src="_jquery/js/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="_jquery/js/_custom.js"></script>
+	<link href="../../www.viethconsulting.com/_jquery/nivo/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- Jake jquery bits -->
+	<script type="text/javascript" src="includes/functions/equal_height.js"></script>
+	<script type="text/javascript" src="includes/functions/formatPhoneLink.js"></script>
+	<script type="text/javascript" src="includes/functions/itemSlider.js"></script>
+	<script type="text/javascript" src="includes/functions/linkConverter.js"></script>
+	<script type="text/javascript" src="includes/functions/navPadder.js"></script>
+	<script type="text/javascript" src="includes/functions/user_image_hw_fix.js"></script>
+	<script type="text/javascript" src="includes/functions/vcenter.js"></script>
+
+	<!-- Added by Argie -->
+	<link rel="shortcut icon" type="image/ico" href="images/favicon.html" />
+
+	<!-- Google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- Our style sheets -->
+	<link rel="stylesheet" type="text/css" href="css/style29b1.css?combobreaker=1500046336" />
+	
+</head>
+
+<body>
+	<div id="mobileMenuWrapper" class="test3">
+		<ul id="mobile-menu" class="test2">
+			<li id="triggerClose" class="mobileMenuTrigger">+</li>
+			<li><a href="index.html" class="home-link">Home</a></li>
+			<li><a href="about.html" target="_top">About </a></li>
+			<li><a href="team_member.html" target="_top">Team Members</a></li>
+			<li><a href="news_event.html" target="_top">News & Events</a></li>
+			<li><a href="committees.html" target="_top">Committees</a></li>
+			<li><a href="contact.html" target="_top">Contact</a></li>
+			<li class="mobile-login">
+				<a href="#" data-toggle="modal" data-target="#myModal">
+					Member Login
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var $trigger = $('.mobileMenuTrigger');
+			var $target  = $('#mobileMenuWrapper');
+			$trigger.click(function(e){
+				$target.toggleClass('open');
+				e.stopPropagation();
+			});
+		//Handles menu hide/show
+		$(".mToggle").click(function(e){
+			$(this).siblings("ul.mDropdown").toggleClass("open");
+			e.stopPropagation();
+		});
+		$("body").click(function(e){
+			clicked = $(e.target);
+			console.log(clicked);
+			var pass = true;
+			if(clicked.parents("#mobile-menu").length){
+				pass = false;
+			}
+			if(!$target.hasClass("open")){
+				pass = false;
+				console.log("this");
+			}
+			console.log(pass);
+			if(pass == true){
+				e.stopPropagation();
+				$target.toggleClass('open');
+			}
+		});
+		
+		//
+		
+	});
+</script>
+<!-- Start of Member Login Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Member Log In</h4>
+			</div>
+			<div class="modal-body">
+				
+				<div id="login">
+					<form action="#" method="post">
+						<input type="hidden" name="org_id" value="ORF1" />
+						<div>
+							<input name="Username" type="text" placeholder="Username" class="" />
+						</div><div>
+							<input name="Password" type="password" placeholder="Password" class="" />
+						</div>
+						<a class="" href="forgot_pwd.html">Forgot Password?</a>
+						<input type="submit" value="Sign In" class="" />
+
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of Member Login Modal -->
+
+<div id="body-container" class="container">
+	<div id="header-wrap" class="row">
+		<div id="logo-wrap" class="col-md-2 col-sm-5 col-xs-12">
+			<a href="index.html">
+				<img src="images/bean/logo-bean.png" width="128" height="171" alt="BEAN" class="img-responsive">
+			</a>
+		</div><!-- end of #logo-wrap -->
+		<div  class="col-md-5 col-sm-5 col-xs-12">
+
+			<img src="images/img/header1.PNG"  style="margin-top: 30px;">
+		</div>
+		<div class="social-search-wrap">
+			<div id="social-media" class="col-md-2 col-sm-3 col-xs-6">
+				<a href="http://www.facebook.com/">
+					<img src="images/facebook.png" />
+				</a>
+				
+				<a href="http://www.twitter.com/">
+					<img src="images/twitter.png" />
+				</a>
+				<a href="mailto:biomedengnepal@gmail.com">
+					<img src="images/email.png" />
+				</a>
+			</div><!-- end of #social-media -->
+
+			<div id="search" class="col-md-3 col-sm-4 col-xs-6">
+				
+				<form id="searchbox" action="https://memberleap.com/members/search/query.php?org_id=ORF1">
+					<div class="input-group">					
+
+						<input id="q" form-control name="keyword" type="search" class="search-input form-control" placeholder="Search">
+						<input type="hidden" name="org_id" value="ORF1">
+						<span class="input-group-addon"><button value="" name="sa" class="search-button" type="submit"></span>
+						</div>
+					</form>			</div>
+				</div>
+
+
+
+				<div id="main-menu" class="col-md-12 hidden-sm hidden-xs">
+					<div id="nav_menu" class="NP collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav men-level-">
+							<li><a href="index.html" class="home-link">Home</a></li>
+							<li><a href="about.html" target="_top">About </a></li>
+							<li><a href="team_member.html" target="_top">Team Members</a></li>
+							<li><a href="news_event.html" target="_top">News & Events</a></li>
+							<li><a href="committees.html" target="_top">Committees</a></li>
+							<li><a href="contact.html" target="_top">Contact</a></li>
+
+							<li class="mLogin">
+								<a href="#" data-toggle="modal" data-target="#myModal">
+									Member Login
+								</a>
+							</li></ul>
+						</div>
+						<script type="text/javascript">
+							$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+								event.preventDefault(); 
+								event.stopPropagation(); 
+								$(this).parent().toggleClass('open');
+								var menu = $(this).parent().find("ul");
+								var menupos = menu.offset();
+
+								if ((menupos.left + menu.width()) + 30 > $(window).width()) {
+									var newpos = - menu.width();      
+								} else {
+									var newpos = $(this).parent().width();
+								}
+								menu.css({ left:newpos });
+							});
+							function checkForChanges(){
+								if (!$('.navbar-collapse').hasClass('in')){
+									$('.nav-row').css('max-height','40px');
+								} else {
+									$('.nav-row').css('max-height','none');
+									setTimeout(checkForChanges, 500);
+								}
+							}
+							$(function(){
+								checkForChanges();
+							});
+						</script>	
+					</div>
+
+					<div id="mobile-menu-col">
+						<div id="mobile-toggle" class="mobileMenuTrigger hidden-lg">
+							<svg version="1.1" id="burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
+							<g id="burger-path">
+								<rect x="0" y="0" fill="#5A7291" width="35" height="35"/>
+								<line fill="none" stroke="#FFFFFF" stroke-width="3.8889" stroke-linecap="round" x1="6.4" y1="9" x2="28.6" y2="9"/>
+								<line fill="none" stroke="#FFFFFF" stroke-width="3.8889" stroke-linecap="round" x1="6.4" y1="17.5" x2="28.6" y2="17.5"/>
+								<line fill="none" stroke="#FFFFFF" stroke-width="3.8889" stroke-linecap="round" x1="6.4" y1="26" x2="28.6" y2="26"/>
+							</g>
+						</svg>
+					</div>
+				</div><!-- end of #mobile-menu-col -->
+			</div>
+
+			<div class="container">
+				<h2 class="section-title"><b>TEAM</b> MEMBERS</h2>
+
+				<div class="row">
+					<h3 class="heading">Advisory</h3>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/sam_topham.png" class="img img-responsive img">
+						<figcaption> Prof. Som Topham, Ph.D <br> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Advisor</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6"> 
+						<img src="images/bean/udendra.PNG" class="img img-responsive img">
+						<figcaption> Prof. Dr. Uphendra Devkota <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Advisor</figcaption>
+					</div>
+					
+
+				</div>
+
+				<div class="row">
+					<h3 class="heading">Founder Member of BEAN</h3>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/maninath.PNG" class="img img-responsive img">
+						<figcaption> Mani Nath Paneru <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;President</figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6"> 
+						<img src="images/bean/chanchal.PNG" class="img img-responsive img">
+						<figcaption> Chanchal Joshi <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Vice-President</figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/roshan.PNG" class="img img-responsive img">
+						<figcaption> Roshan Bajracharya<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;General Secretary</figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/jay.PNG" >
+						<figcaption> Jay Shrestha <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Treasurer</figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/sujit.PNG" class="img img-responsive img">
+						<figcaption> Sujit Banskota <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secretary </figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/sunil.PNG" class="img img-responsive img">
+						<figcaption> Sunil Shrestha <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member</figcaption>
+					</div>
+					<div class="col-sm-2 col-xs-6">
+						<img src="images/bean/prakash.PNG" class="img-responsive">
+						<figcaption> Prakash Pandey <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member</figcaption>
+					</div>
+				</div>
+				<div class="row">
+					<h3 class="heading">Executive Board Member</h3>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/bhawi.PNG" class="img img-responsive img">
+						<figcaption> Bhawi Pd. Gurung <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;President</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6"> 
+						<img src="images/bean/roshan1.PNG" class="img img-responsive img">
+						<figcaption> Roshan Bajracharya <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Vice-President</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/chiri.PNG" class="img img-responsive img">
+						<figcaption> Chiri Babu Maharajan<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;General Secretary</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/sunilshrestha.PNG" class="img img-responsive img">
+						<figcaption> Sunil Shrestha <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Treasurer</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/ramesh.PNG" class="img img-responsive img">
+						<figcaption> Ramesh Man Shrestha <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secretary </figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/bikash.PNG" class="img img-responsive img">
+						<figcaption> Bikash B. Shrestha <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IPP</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/udhab.PNG" class="img img-responsive img">
+						<figcaption> Udhab Lal Singh <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/suresh.PNG" class="img img-responsive img">
+						<figcaption> Suresh Kumar Shrestha<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/gopal.PNG" class="img img-responsive img">
+						<figcaption> Gopal Neupane <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/kapil.PNG" class="img img-responsive img">
+						<figcaption> Kapil Gautam <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/cramik.PNG" class="img img-responsive img">
+						<figcaption> Cramik Maharjan <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<img src="images/bean/hari_gopal.PNG" class="img img-responsive img">
+						<figcaption> Hari Gopal Ranjitkar <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Executive Member</figcaption>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+			<!-- <style type="text/css">         img {             max-width: 100%;             height:  auto !important;             display: block;         } </style>  -->
+			
+
+			<div id="footer-container" class="container">
+				<div id="contact-wrap" class="col-md-6 col-sm-6 col-xs-12">
+					<h3 class="heading"> &nbsp;&nbsp;&nbsp;Address</h3>
+					<p >&nbsp;&nbsp;&nbsp; &rarr; Baluwatar</p><br>
+					<p>&nbsp;&nbsp;&nbsp; &rarr;9851089978</p><br>
+					<p>&nbsp;&nbsp;&nbsp; &rarr; <a href="mailto:biomedengnepal@gmail.com"> biomedengnepal@gmail.com </a></p><br>
+
+					<div id="copyright-wrap" class="col-md-6 col-sm-6 col-xs-12">
+						<p>
+							<br/>
+						</p>
+					</div><!-- end of #copyright-wrap -->
+				</div><!-- end of #footer-container-->
+				<div id="contact-wrap" class="col-md-6 col-sm-6 col-xs-12">
+					<h3 class="side-title">Find Us on Facebook</h3>
+					<div class="widget facebook-widget">
+
+
+						<script type="text/javascript">
+							$(document).on('ready', function() {
+								$(".autoplay").slick({
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									autoplay: true,
+									autoplaySpeed: 2000,
+									prevArrow: '<i class="fa fa-chevron-left hidden-xs fa-2x mod-left" aria-hidden="true"></i>',
+									nextArrow: '<i class="fa fa-chevron-right hidden-xs fa-2x mod-right" aria-hidden="true"></i>',
+
+								});
+								$(".regular").slick({
+									slidesToShow: 4,
+									slidesToScroll: 1,
+									variableWidth: true,
+									infinite: true,
+									autoplay: true,
+									autoplaySpeed: 2000,
+									prevArrow: '<i class="fa fa-chevron-left hidden-xs fa-2x mod-left" aria-hidden="true"></i>',
+									nextArrow: '<i class="fa fa-chevron-right hidden-xs fa-2x mod-right" aria-hidden="true"></i>',
+
+								});
+							});
+						</script>
+
+
+
+
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbeapolimi%2F%3Fref%3Dbr_rs&tabs=timeline&width=300&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+						<div class="fb-like" data-href="https://www.facebook.com/" data-width="336" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+					</div><!-- end of #footer-container-->
+				</div>
+
+			</div>
+			<div class="row" style="color: red; font-style: italic;">
+				&copy; <strong>2017 Biomedical Engineering Association Of Nepal (BEAN). All right reserved.</strong> 
+			</div>
+		</body>
+
+
+		</html>

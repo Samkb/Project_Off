@@ -1,0 +1,49 @@
+.section-background{
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-attachment: fixed;
+	text-transform: uppercase;
+	background: url('../images/nepal1.jpg');
+	text-align: center;
+	background-size: cover;
+}
+.page-header{
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 200px;
+	border-bottom: none;
+	padding-top: 0px;
+	padding-bottom: 40px;
+	font-size: 34px;
+	margin: 63px -2px -18px;
+	padding-left: 120px;
+}
+.breadcrumb{
+	list-style: none;
+	background-color: transparent;
+	border-radius: 0px;
+
+}
+.breadcrumb .active{
+	color: #fff;
+}
+.breadcrumb>li+li:before {
+	padding: 0 5px;
+	color: #fff;
+	content: "\f3d3";
+	font-family: "ionicons";
+}
+.breadcrumb a{
+	color: #fff;
+	border: 1px solid transparent;
+	text-decoration: none;
+	padding: 5px;
+	padding-left: 145px;
+}
+.breadcrumb a:hover{
+	color: #fff;
+	border: 1px solid #fff;
+}
+.left_inner {
+    margin-top: 88px;
+}

@@ -1,0 +1,104 @@
+
+
+.section-title .heading {
+    font-size: 45px!important;
+    color: #333!important;
+    margin-top: 82px;
+    margin-bottom: -40px;
+}
+
+.section-title .heading {
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+
+.innerpagedetail .story .trip_facts {
+    display: inline-block;
+    width: 19%;
+    color: #895408;
+}
+.innerpagedetail{
+    padding: 30px 0;
+}
+
+.innerpagedetail .story .trip_facts .tf .tvalue {
+    font-size: 20px;
+}
+
+.innerpagedetail .story .trip_facts .tf{
+    font-size: 12px;
+}
+.lbl {
+    font-size: 18px;
+    color:#000000;
+}
+.innerpagedetail .story .trip_facts .tf .tvalue::after {
+    content: "";
+    background: url(assets/images/header.png) no-repeat;
+    display: block;
+    height: 3px;
+    width: 100%;
+}
+
+.tf {
+    display: initial;
+    width: 26%;
+    color: #fe860c;
+}
+
+.trip_facts {
+    display: inline-block;
+    width: 19%;
+    color: #895408;
+}
+.innerpagedetail .story .trip_facts .tf {
+    font-size: 20px;
+}
+.trip_facts{
+	font-size: 20px;
+}
+
+.tvalue {
+    font-size: 20px;
+}
+
+
+
+
+.detail_button_wrapper {
+    margin-top: 25px;
+}
+
+.quick_text {
+    display: inline-block;
+}
+
+
+
+
+.btn {
+    font-size: 13px;
+    padding: 7px 10px;
+    font-size: 13px;
+    color: #fff;
+    font-family: 'robotoregular';
+    background-color: #0F5FA9;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px
+}
+
+.trans_box.text-left.innerpage ul {
+    list-style: none;
+     background-color: #EDEDED; 
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 0;
+}
+
